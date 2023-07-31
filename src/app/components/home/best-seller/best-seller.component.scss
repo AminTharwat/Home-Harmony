@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+img {
+ width: 100%;
+}
+
+.seller__grid,
+.product__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.seller__card {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.seller__card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.seller__card__details {
+  padding: 1rem 0;
+  background-color: var(--text-light);
+  text-align: center;
+}
+
+.seller__card__details .price {
+  font-size: 0.8rem;
+}
+
+.seller__card__details .price span {
+  color: var(--primary-color);
+}
+
+.add-to-cart-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--primary-color-dark);
+}
+/* Existing CSS code */
+
+/* Add the following CSS code */
+.seller__card {
+  position: relative;
+}
+
+.seller__overlay {
+  position: absolute;
+  top: 40%;
+  left: 63%;
+  right: -26%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.seller__card:hover .seller__overlay {
+  opacity: 1;
+}
+
+.add-to-cart-btn {
+   color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.product-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.product-price {
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}

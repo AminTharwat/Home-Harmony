@@ -1,0 +1,62 @@
+
+.big-collection{
+  width: 90%;
+  margin: 100px auto;
+}
+.big-collection .collect-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  grid-row-gap: 20px;
+}
+.collect-flex .link{
+  margin-top: 20px;
+}
+.big-collection .collect{
+  margin: 0px 10px;
+}
+.collect-flex .link a{
+  display: inline-block;
+  color: var(--main-color);
+  text-transform: capitalize;
+  text-decoration: none;
+  position: relative;
+}
+.collect-flex .link a::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: var(--main-color);
+  left: 0%;
+  top: 23px;
+  transform: scale(0);
+  transition: .5s ease-in-out;
+}
+.collect-flex .collect:hover a::before{
+  transform: scale(1);
+}
+
+.collect-flex .collect .image{
+  position: relative;
+}
+
+.image :hover{
+  transform: scale(1.03);
+   transition: all .75s ease-in-out;
+   box-shadow: 2px 3px 0px #0604041f;
+
+}
+
+.img{
+  border-radius: 1rem;
+}
+
+@media(max-width: 1230px){
+  .big-collection .collect-flex{
+      display: flex;
+      justify-content: center;
+  }
+}
