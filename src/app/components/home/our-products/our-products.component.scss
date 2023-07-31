@@ -33,7 +33,7 @@
   left: 0%;
   top: 23px;
   transform: scale(0);
-  transition: .5s ease-in-out;
+  transition:all .4s ease-in-out;
 }
 .collect-flex .collect:hover a::before{
   transform: scale(1);
@@ -45,7 +45,7 @@
 
 .image :hover{
   transform: scale(1.03);
-   transition: all .75s ease-in-out;
+   transition: all .4s ease-in-out;
    box-shadow: 2px 3px 0px #0604041f;
 
 }
