@@ -9,6 +9,7 @@ header{
   top: 0;
   z-index: 1111;
   transition: .5s ease-in-out;
+  height: 80px;
 }
 
 header .logo a{
@@ -40,7 +41,13 @@ header ul li a{
 header ul li a:hover{
   color: #ffc107;
 }
-
+.num{    position: absolute;
+  top: -15px;
+  left: -9px;
+  background: red;
+  width: 20px !important;
+  height: 20px;
+  font-size: 11px;}
 header .bars{
   display: none;
 }
@@ -52,6 +59,7 @@ header .bars img{
 header.active{
   background: #FFF;
   box-shadow: 0px 1px 0px #DDD;
+  height: 90px;
 }
 header.active .logo a{
   color: #207178;
@@ -63,7 +71,7 @@ header.active ul li a{
 header.active ul li a:hover{
   color: #222467;
 }
-header.active #bar{
+header #bar{
 
   padding: 4px 5px;
   width: 65px;
@@ -131,4 +139,24 @@ header .list-unstyled .rounded-circle {
 
 header.active .list-unstyled .cart {
   color: #000;
+}
+
+
+header, .logo img, .logo {
+  transition: 0.2s all ease-in-out;
+}
+
+header .logo-dark {
+  display: none;
+}
+header .logo-white {
+  display: block !important;
+}
+
+
+header.active .logo-dark {
+  display: block;
+}
+header.active .logo-white {
+  display: none !important;
 }

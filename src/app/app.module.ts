@@ -10,6 +10,15 @@ import { BestSellerComponent } from './components/home/best-seller/best-seller.c
 import { SaleComponent } from './components/home/sale/sale.component';
 import { OurProductsComponent } from './components/home/our-products/our-products.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ReviewsComponent } from './components/home/reviews/reviews.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { AccountComponent } from './components/account/account.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { AllProductsComponent } from './components/all-products/all-products.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,11 +29,23 @@ import { FooterComponent } from './components/footer/footer.component';
     BestSellerComponent,
     SaleComponent,
     OurProductsComponent,
-    FooterComponent
+    FooterComponent,
+    ReviewsComponent,
+    CheckoutComponent,
+    AccountComponent,
+    ShoppingCartComponent,
+    ProductDetailsComponent,
+    AllProductsComponent,
+    CartItemComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { CartItem, ProductItem } from 'src/app/shared/models/cart';
+import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
   selector: 'app-best-seller',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BestSellerComponent implements OnInit {
 
-  constructor() { }
+  carts: ProductItem[] = [];
+  constructor(public dataservice:DataService) { }
+addToCart(item:CartItem){
+this.dataservice.addToCart(item);
+console.log(this.addToCart)
+}
 
-  ngOnInit() {
-  }
+
+ngOnInit() {
+  this.carts = this.dataservice.carts;
+}
 
 }

@@ -1,0 +1,39 @@
+
+<div class="seller__card border rounded-3 col-md-3 w-100">
+  <img [src]="product?.img" alt="seller" />
+  <div *ngIf="!product?.cartCount" class="seller__overlay">
+    <button class="btn btn-warning p-2 m-2" (click)="dataservice.addToCart(product)">
+      +Add to Cart
+    </button>
+  </div>
+
+  <div *ngIf="!!product?.cartCount" class="seller__overlay active">
+    <button style="    width: 40px;
+    height: 40px;" class="d-flex justify-content-center align-items-center btn btn-danger p-2 m-2" (click)="dataservice.minusItemFromCart(product)">
+      <span *ngIf="!!product.cartCount && product.cartCount > 1">-</span>
+      <span *ngIf="!!product.cartCount && product.cartCount == 1">
+        <i class="fa fa-trash" ></i>
+      </span>
+
+    </button>
+    <div style="width: fit-content;
+    padding: 7px 20px;" class="form-control">{{product.cartCount}}</div>
+    <button style="width: 40px;
+    height: 40px;" class="d-flex justify-content-center align-items-center btn btn-success p-2 m-2" (click)="dataservice.addToCart(product)">
+      +
+    </button>
+  </div>
+
+  <div class="card-body">
+    <h3>{{ product?.title }}</h3>
+    <p>{{ product?.description }}</p>
+    <h5>
+      <span class="fs-6">Price: &nbsp;</span
+      ><span class="text-success fs-6 fw-medium">{{ product?.price }}</span>&nbsp;<del
+        class="text-danger fs-6 fw-medium"
+        >{{ product?.delPrice }}</del
+      >
+    </h5>
+    <button>Order Now</button>
+  </div>
+</div>

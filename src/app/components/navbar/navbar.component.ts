@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,8 +8,9 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public dataservice:DataService) { }
+  openCart() {
+   }
   ngOnInit() {
   }
   isScrolled = false;

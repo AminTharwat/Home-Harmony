@@ -117,7 +117,7 @@ img {
     height: 100%;
   }
 
-  .seller__card:hover .seller__overlay {
+  .seller__card:hover .seller__overlay, .seller__card .seller__overlay.active {
     opacity: 1;
   }
 

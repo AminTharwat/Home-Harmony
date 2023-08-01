@@ -1,19 +1,22 @@
 
 
 <header id="header" [ngClass]="{ 'active': isScrolled }">
-  <div class="logo">
-      <a href="#"><img class="w-25 " id="lol" src="assets/logo2.png" alt=""> </a>
+  <div class="logo w-25" [ngStyle]="{'transform': isScrolled ? 'scale(1.2)' : 'scale(1)'}">
+      <a href="#">
+        <img class="logo-dark w-100" id="lol" src="assets/logo2.png" alt="">
+        <img class="logo-white w-100"  id="lol" src="assets/logo2-white.png" alt="">
+      </a>
   </div>
-  <ul class="navigation text-white">
+  <ul class="navigation text-white list-unstyled">
     <li><a href="#home" [ngClass]="{ 'active': isActiveSection('home') }">home</a></li>
-    <li><a href="#features" [ngClass]="{ 'active': isActiveSection('features') }">Check out</a></li>
-    <li><a href="#new-arrival" [ngClass]="{ 'active': isActiveSection('new-arrival') }">new arrival</a></li>
+    <li><a href="#features" [ngClass]="{ 'active': isActiveSection('features') }" routerLink="/checkout">Check out</a></li>
+    <li><a href="#new-arrival" [ngClass]="{ 'active': isActiveSection('new-arrival') }" routerLink="/allproduct">new arrival</a></li>
     <li><a href="#contact" [ngClass]="{ 'active': isActiveSection('contact') }">contact</a></li>
   </ul>
   <ul class="list-unstyled align-items-center gap-3">
-    <li class="w-25 m-0"> <i class="cart fa fa-shopping-cart text-dark" [ngClass]="{ 'text-white': !isScrolled }"></i></li>
+    <li class="w-25 m-0"> <i class="cart fa fa-shopping-cart text-dark fs-5 position-relative" (click)="openCart()" [ngClass]="{ 'text-white': !isScrolled }"><span class="num text-white p-1 rounded-circle text-center ">{{dataservice.getTotalCartItems()}}</span></i></li>
     <li class="w-25 m-0">
-      <img class="rounded-circle" id="bar" src="assets/pic-1.png" alt="">
+      <img class="rounded-circle" id="bar" src="assets/pic-1.png" alt="" routerLink="/account">
     </li>
   </ul>
  </header>
