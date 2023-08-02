@@ -3,11 +3,10 @@ export class ProductItem{
   title?:string;
   img?:string;
   description?:string;
-  price?:string;
+  price?:number;
   delPrice?:string;
-  cartCount?: number
-}
+  cartCount?: number;
+  subtotal?:number;
+ }
 
 
-export class CartItem extends ProductItem{
-}

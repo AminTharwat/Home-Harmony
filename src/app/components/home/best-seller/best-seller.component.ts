@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CartItem, ProductItem } from 'src/app/shared/models/cart';
+import {   ProductItem } from 'src/app/shared/models/cart';
 import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
@@ -11,7 +11,7 @@ export class BestSellerComponent implements OnInit {
 
   carts: ProductItem[] = [];
   constructor(public dataservice:DataService) { }
-addToCart(item:CartItem){
+addToCart(item:ProductItem){
 this.dataservice.addToCart(item);
 console.log(this.addToCart)
 }

@@ -1,0 +1,40 @@
+<table class="table table-striped" *ngIf="!!product.cartCount">
+  <thead *ngIf="product  ">
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Subtotal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="align-baseline">
+      <td>{{ product?.title }}</td>
+      <td>{{ product?.price }}</td>
+      <td>
+        <div *ngIf="product?.cartCount" class="seller__overlay active d-flex align-items-center">
+          <button class="btn btn-outline-danger  m-2" (click)="dataService.minusItemFromCart(product)">
+            <span *ngIf="product.cartCount > 1">-</span>
+            <span *ngIf="product.cartCount == 1">
+              <i class="fa fa-trash"></i>
+            </span>
+          </button>
+          <div class="form-control px-3" style="    width: auto;
+          border: .5px solid #ebebeb">
+            {{ product.cartCount }}
+          </div>
+          <button class="btn btn-outline-success  m-2" (click)="dataService.addToCart(product)">
+            +
+          </button>
+        </div>
+      </td>
+      <td>{{ product?.subtotal |  number:'1.0-2' }}</td>
+
+    </tr>
+  </tbody>
+  <ng-template #noCart>
+    <tr>
+      <td colspan="5">No products in cart yet.</td>
+    </tr>
+  </ng-template>
+</table>

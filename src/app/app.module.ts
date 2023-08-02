@@ -19,6 +19,7 @@ import { AllProductsComponent } from './components/all-products/all-products.com
 import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductItemComponent } from './components/product-item/product-item.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ShoppingCartComponent,
     ProductDetailsComponent,
     AllProductsComponent,
-    CartItemComponent
+    CartItemComponent,
+    ProductItemComponent
 
   ],
   imports: [

@@ -14,7 +14,7 @@
     <li><a href="#contact" [ngClass]="{ 'active': isActiveSection('contact') }">contact</a></li>
   </ul>
   <ul class="list-unstyled align-items-center gap-3">
-    <li class="w-25 m-0"> <i class="cart fa fa-shopping-cart text-dark fs-5 position-relative" (click)="openCart()" [ngClass]="{ 'text-white': !isScrolled }"><span class="num text-white p-1 rounded-circle text-center ">{{dataservice.getTotalCartItems()}}</span></i></li>
+    <li class="w-25 m-0"> <i class="cart fa fa-shopping-cart   text-secondary fs-5 position-relative" (click)="openCart()" [ngClass]="{ 'text-secondary': !isScrolled }" routerLink="/cart"><span class="num  p-1 rounded-circle text-center ">{{dataservice.getTotalCartItems()}}</span></i></li>
     <li class="w-25 m-0">
       <img class="rounded-circle" id="bar" src="assets/pic-1.png" alt="" routerLink="/account">
     </li>

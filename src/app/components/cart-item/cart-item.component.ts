@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CartItem, ProductItem } from 'src/app/shared/models/cart';
+import {   ProductItem } from 'src/app/shared/models/cart';
 import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { DataService } from 'src/app/shared/services/data.service';
   styleUrls: ['./cart-item.component.scss']
 })
 export class CartItemComponent implements OnInit {
-  @Input() product: CartItem = {};
+  @Input() product: ProductItem = {};
 
   constructor(public dataservice:DataService) { }
 

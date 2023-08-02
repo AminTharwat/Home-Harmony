@@ -20,6 +20,7 @@ const routes: Routes = [
   {path:'checkout',component:CheckoutComponent},
   {path:'account',component:AccountComponent},
 
+
 ];
 
 @NgModule({
